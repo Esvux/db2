@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>ER_LaLiga</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+  <data-source id="DS2">
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="PostreSQL LaLiga" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/laligadb" />
+   <property key="UID" value="postgres" />
+   <property key="PWD" value="1234qwer" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="7a4c8683-9b81-40b0-b07d-f7e8ef7486fc" dbcs-ref="DS2" name="PostreSQL LaLiga" physicalName="PostreSQL LaLiga" >
+   <catalog id="CAT1" populated="true" UUID="ee1ada2d-057b-41c0-96f0-407d4563a27d" name="laligadb" nativeTerm="database" physicalName="laligadb" >
+    <schema id="SCH2" populated="true" UUID="0ed23874-07d4-44a7-8b99-cebd055f60f4" name="information_schema" nativeTerm="schema" physicalName="information_schema" >
+    </schema>
+    <schema id="SCH3" populated="true" UUID="2113afc8-3d91-47c7-b081-e5c5299a6350" name="pg_catalog" nativeTerm="schema" physicalName="pg_catalog" >
+    </schema>
+    <schema id="SCH4" populated="true" UUID="c878bb7d-ae52-4c25-acd6-025a154b856c" name="pg_toast_temp_1" nativeTerm="schema" physicalName="pg_toast_temp_1" >
+    </schema>
+    <schema id="SCH5" populated="true" UUID="3d9cdf28-e9a8-47a8-b0bb-4b872f43af3a" name="public" nativeTerm="schema" physicalName="public" >
+     <table id="TAB6" populated="true" UUID="2f3ec8fb-f13a-4ff2-9ff7-fc789a154443" name="csv_partido" objectType="TABLE" physicalName="csv_partido" >
+      <remarks></remarks>
+      <folder id="FOLTAB61" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL7" populated="true" UUID="11b51fd5-9c4b-4247-af15-8c46e04d6f65" autoIncrement="false" name="temporada" nullable="0" physicalName="temporada" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL8" populated="true" UUID="8cceec53-dfb4-4ebd-98cf-fc81c9d82c71" autoIncrement="false" name="jornada" nullable="0" physicalName="jornada" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL9" populated="true" UUID="647076d8-b602-4fff-bbd5-3112154e06aa" autoIncrement="false" name="fecha" nullable="0" physicalName="fecha" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL10" populated="true" UUID="7ea929d6-c348-402f-912a-ec13aa92b1e2" autoIncrement="false" name="equipo_local" nullable="0" physicalName="equipo_local" precision="150" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL11" populated="true" UUID="c2993892-b9f3-47bf-be4f-47fecdf4dd30" autoIncrement="false" defaultValue="0" name="goles_local" nullable="0" physicalName="goles_local" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL12" populated="true" UUID="9951dedd-ab5b-4676-8ea0-fd5be9403b2e" autoIncrement="false" defaultValue="0" name="goles_visitante" nullable="0" physicalName="goles_visitante" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL13" populated="true" UUID="f19776bc-4c48-4176-b30d-1a84a8c48818" autoIncrement="false" name="equipo_visitante" nullable="0" physicalName="equipo_visitante" precision="150" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB63" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB62" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB64" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX14" populated="true" UUID="10d9fc18-7733-4cf4-af7d-8510d14f899e" clustered="false" name="csv_partido_pk" physicalName="csv_partido_pk" primaryKeyIndex="true" unique="false" >
+       </index>
+      </folder>
+     </table>
+     <table id="TAB15" populated="true" UUID="c8d00033-496b-4c4c-8842-8f347d44d1e7" name="equipo" objectType="TABLE" physicalName="equipo" >
+      <remarks></remarks>
+      <folder id="FOLTAB151" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL16" populated="true" UUID="96f2ba02-9a68-4e9f-85b6-511ff57616a3" autoIncrement="true" defaultValue="nextval(&apos;public.seq_equipo&apos;::regclass)" name="id_equipo" nullable="0" physicalName="id_equipo" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL17" populated="true" UUID="c7106592-a4e0-4a81-99de-6f828681dc13" autoIncrement="false" name="nombre" nullable="0" physicalName="nombre" precision="150" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB153" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB152" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB154" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX18" populated="true" UUID="6b43d79f-8aee-4f42-931f-e01ea2fed49a" clustered="false" index-type="BTREE" name="pk_equipo" physicalName="pk_equipo" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC19" populated="true" UUID="0d59e638-5cad-4b40-b0f8-f314e71ef3a2" ascendingOrDescending="UNSPECIFIED" column-ref="COL16" name="id_equipo" physicalName="id_equipo" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB20" populated="true" UUID="4cfa71e6-0d9e-48fa-9c95-0f4f956a5fac" name="jornada" objectType="TABLE" physicalName="jornada" >
+      <remarks></remarks>
+      <folder id="FOLTAB201" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL21" populated="true" UUID="81742864-4c2c-4e16-9559-569bd3d1d6ff" autoIncrement="false" name="id_jornada" nullable="0" physicalName="id_jornada" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL22" populated="true" UUID="fb578748-2382-431d-ab67-bd02e69e36fe" autoIncrement="false" name="numero" nullable="0" physicalName="numero" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL23" populated="true" UUID="2da8529f-3c12-4873-b582-abd318afd046" autoIncrement="false" name="nombre" nullable="0" physicalName="nombre" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL24" populated="true" UUID="c596d5e3-86a7-4fb0-8d5d-ae87650ae262" autoIncrement="false" name="fecha_inicio" nullable="0" physicalName="fecha_inicio" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL25" populated="true" UUID="68f6dff6-c3bb-45ec-8260-6a88a1e3ec58" autoIncrement="false" name="fecha_fin" nullable="0" physicalName="fecha_fin" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL26" populated="true" UUID="50d18baa-41dd-4bd3-ac78-75cb7d20d13c" autoIncrement="false" name="id_temporada" nullable="0" physicalName="id_temporada" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB203" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB202" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB204" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX27" populated="true" UUID="2ba07d8b-12c0-4677-9783-81ddcac5ac21" clustered="false" index-type="BTREE" name="pk_jornada" physicalName="pk_jornada" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC28" populated="true" UUID="909bfdad-c29c-4b04-890c-6a2b4c7fb917" ascendingOrDescending="UNSPECIFIED" column-ref="COL21" name="id_jornada" physicalName="id_jornada" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB29" populated="true" UUID="bde93e00-e8b5-4d0f-8399-c6993a1d3058" name="jugador" objectType="TABLE" physicalName="jugador" >
+      <remarks></remarks>
+      <folder id="FOLTAB291" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL30" populated="true" UUID="f32a4014-514e-479d-b3d8-d90d93b89bfe" autoIncrement="false" name="id_jugador" nullable="0" physicalName="id_jugador" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL31" populated="true" UUID="8bc904ba-a2e9-44da-8f78-69f9b92140cd" autoIncrement="false" name="nombre" nullable="0" physicalName="nombre" precision="150" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB293" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB292" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB294" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX32" populated="true" UUID="2ec076c8-ead0-465b-b3bb-50525a0a9189" clustered="false" index-type="BTREE" name="pk_jugador" physicalName="pk_jugador" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC33" populated="true" UUID="499ebbfc-33a0-4d86-8cbf-60dfa8c9e16a" ascendingOrDescending="UNSPECIFIED" column-ref="COL30" name="id_jugador" physicalName="id_jugador" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB34" populated="true" UUID="b25003f9-ad7c-4a21-a014-caa3e8bd04c9" name="liga_temp" objectType="TABLE" physicalName="liga_temp" >
+      <remarks></remarks>
+      <folder id="FOLTAB341" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL35" populated="true" UUID="89107bcf-60b2-418b-9200-6950ae5e537a" autoIncrement="false" name="id_liga_temp" nullable="0" physicalName="id_liga_temp" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL36" populated="true" UUID="19b182e7-9f12-4448-ae22-c6528750caf4" autoIncrement="false" defaultValue="0" name="goles_a_favor" nullable="0" physicalName="goles_a_favor" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL37" populated="true" UUID="128f915b-356c-49ef-bd73-42f21fb90ff6" autoIncrement="false" defaultValue="0" name="goles_en_contra" nullable="0" physicalName="goles_en_contra" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL38" populated="true" UUID="debe30ae-64db-474e-b138-c2322fb2bda2" autoIncrement="false" defaultValue="0" name="punteo" nullable="0" physicalName="punteo" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL39" populated="true" UUID="aaaeae92-96f3-42bf-9cff-7efb9a1665d8" autoIncrement="false" name="id_temporada" nullable="0" physicalName="id_temporada" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL40" populated="true" UUID="39500a22-6c44-4f4c-b659-c5904a6473ee" autoIncrement="false" name="id_equipo" nullable="0" physicalName="id_equipo" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB343" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB342" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB344" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX41" populated="true" UUID="f7ee1d63-9c35-4da3-9b96-6f665ca7b0d5" clustered="false" index-type="BTREE" name="pk_liga_temp" physicalName="pk_liga_temp" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC42" populated="true" UUID="f556c8a6-2859-4cf1-97cd-2d64f233b726" ascendingOrDescending="UNSPECIFIED" column-ref="COL35" name="id_liga_temp" physicalName="id_liga_temp" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB43" populated="true" UUID="1ebebdd0-f94d-4308-ac9f-7328d12d51d9" name="master_goleador" objectType="TABLE" physicalName="master_goleador" >
+      <remarks></remarks>
+      <folder id="FOLTAB431" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL44" populated="true" UUID="cab15c05-442c-48b2-bd95-b8bc900be4a7" autoIncrement="false" name="id_master_goleador" nullable="0" physicalName="id_master_goleador" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL45" populated="true" UUID="4c5e00bc-6b69-44a8-bc01-1187b008fff6" autoIncrement="false" name="temporada" nullable="0" physicalName="temporada" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL46" populated="true" UUID="6c2eec4f-7cd9-485a-a4b9-9d7f528d9ab7" autoIncrement="false" name="jugador" nullable="0" physicalName="jugador" precision="150" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL47" populated="true" UUID="df16cabf-d8c6-461d-993d-4d950de6f09b" autoIncrement="false" defaultValue="0" name="goles" nullable="0" physicalName="goles" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB433" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB432" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB434" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX48" populated="true" UUID="9cb28535-03dc-4fe7-9248-9085e7555587" clustered="false" index-type="BTREE" name="pk_master_goleador" physicalName="pk_master_goleador" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC49" populated="true" UUID="ceea9529-2ef9-4486-b605-167d21bc2cb9" ascendingOrDescending="UNSPECIFIED" column-ref="COL44" name="id_master_goleador" physicalName="id_master_goleador" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB50" populated="true" UUID="3c633158-089a-448e-a8cf-50bb452058b1" name="master_partido" objectType="TABLE" physicalName="master_partido" >
+      <remarks></remarks>
+      <folder id="FOLTAB501" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL51" populated="true" UUID="0a2245a0-7e28-42ba-b4ad-1a40ca3a88ab" autoIncrement="false" name="temporada" nullable="0" physicalName="temporada" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL52" populated="true" UUID="c699575a-c634-4fda-a59b-48d7e2f87086" autoIncrement="false" name="jornada" nullable="0" physicalName="jornada" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL53" populated="true" UUID="a6dd3733-9a02-4f66-ac27-b437f6d3cd64" autoIncrement="false" name="fecha" nullable="0" physicalName="fecha" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL54" populated="true" UUID="2ead28b4-aee7-4104-ad69-d9da48625108" autoIncrement="false" name="equipo_local" nullable="0" physicalName="equipo_local" precision="150" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL55" populated="true" UUID="aa7ee7a5-2a76-4182-a06e-5fe18c57fcf5" autoIncrement="false" defaultValue="0" name="goles_local" nullable="0" physicalName="goles_local" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL56" populated="true" UUID="dc036b83-9c0c-47d6-a72b-d5c5eb80d63b" autoIncrement="false" defaultValue="0" name="goles_visitante" nullable="0" physicalName="goles_visitante" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL57" populated="true" UUID="0308cc6e-5b3c-4381-a662-1909ca9322e9" autoIncrement="false" name="equipo_visitante" nullable="0" physicalName="equipo_visitante" precision="150" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB503" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB502" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB504" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX58" populated="true" UUID="7cde7f88-9688-4184-a627-7d0d11a4656e" clustered="false" name="master_partido_pk" physicalName="master_partido_pk" primaryKeyIndex="true" unique="false" >
+       </index>
+      </folder>
+     </table>
+     <table id="TAB59" populated="true" UUID="de7fa48a-cc0e-4855-8e1b-250e3529779e" name="participacion" objectType="TABLE" physicalName="participacion" >
+      <remarks></remarks>
+      <folder id="FOLTAB591" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL60" populated="true" UUID="c47dbc81-0c5b-49e8-8b5c-2b80e92d30c2" autoIncrement="false" name="id_participacion" nullable="0" physicalName="id_participacion" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL61" populated="true" UUID="f9700ad3-3127-4f29-96e3-9ba3b3e588ce" autoIncrement="false" name="id_temporada" nullable="0" physicalName="id_temporada" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL62" populated="true" UUID="37c2db72-518d-4824-bedf-4df83d2af063" autoIncrement="false" name="id_equipo" nullable="1" physicalName="id_equipo" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB593" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB592" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB594" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX63" populated="true" UUID="70f39dbe-e487-4c08-91b6-4d2db8988a06" clustered="false" index-type="BTREE" name="pk_participacion" physicalName="pk_participacion" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC64" populated="true" UUID="7abf5ef5-7074-4154-be3d-d17af83d16ad" ascendingOrDescending="UNSPECIFIED" column-ref="COL60" name="id_participacion" physicalName="id_participacion" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB65" populated="true" UUID="2bec6ff2-1cf4-4e14-a42a-5c7868cb6a91" name="partido" objectType="TABLE" physicalName="partido" >
+      <remarks></remarks>
+      <folder id="FOLTAB651" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL66" populated="true" UUID="3553b6cb-e3b1-475b-a272-05aa318f4005" autoIncrement="false" name="id_partido" nullable="0" physicalName="id_partido" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL67" populated="true" UUID="e9ec305e-958c-443d-ba2a-65425565cd05" autoIncrement="false" name="id_local" nullable="0" physicalName="id_local" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL68" populated="true" UUID="6a9d41aa-8aeb-440f-965c-3750bc0653df" autoIncrement="false" name="id_visitante" nullable="0" physicalName="id_visitante" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL69" populated="true" UUID="a1f2578f-a2f2-472d-a56c-87fd68e976ed" autoIncrement="false" name="fecha" nullable="0" physicalName="fecha" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL70" populated="true" UUID="ea150517-558c-4b31-8cff-278a3b9edc48" autoIncrement="false" defaultValue="0" name="goles_local" nullable="0" physicalName="goles_local" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL71" populated="true" UUID="b5d943a1-7e5f-4c46-9b6e-9dd388db76a1" autoIncrement="false" defaultValue="0" name="goles_visitante" nullable="0" physicalName="goles_visitante" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL72" populated="true" UUID="364771f8-598a-4a5f-8267-c5a9a12d0a35" autoIncrement="false" name="id_jornada" nullable="0" physicalName="id_jornada" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB653" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB652" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB654" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX73" populated="true" UUID="65e1f1c2-92c8-4d9a-9724-185140431690" clustered="false" index-type="BTREE" name="pk_partido" physicalName="pk_partido" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC74" populated="true" UUID="ebda70a3-41b0-4034-a08b-cab8b1688278" ascendingOrDescending="UNSPECIFIED" column-ref="COL66" name="id_partido" physicalName="id_partido" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB75" populated="true" UUID="ae719583-d93c-40f0-b63c-62b20ec87013" name="record" objectType="TABLE" physicalName="record" >
+      <remarks></remarks>
+      <folder id="FOLTAB751" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL76" populated="true" UUID="3e23c404-8172-4922-94e2-17ae8316ec45" autoIncrement="false" name="id_record" nullable="0" physicalName="id_record" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL77" populated="true" UUID="78232901-6fb1-44c8-9186-1eb388c4e9e4" autoIncrement="false" name="id_temporada" nullable="0" physicalName="id_temporada" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL78" populated="true" UUID="531d5317-e6ea-4bd1-9dd5-126979a9298d" autoIncrement="false" name="id_jugador" nullable="0" physicalName="id_jugador" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL79" populated="true" UUID="83a77c8b-9920-4f8a-9159-67f96f729d0a" autoIncrement="false" defaultValue="0" name="goles" nullable="0" physicalName="goles" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB753" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB752" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB754" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX80" populated="true" UUID="d02347a0-9fad-4ce4-b83d-9d9fd10097e9" clustered="false" index-type="BTREE" name="pk_record" physicalName="pk_record" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC81" populated="true" UUID="915f8604-dd66-4310-bb07-f455e9210fb3" ascendingOrDescending="UNSPECIFIED" column-ref="COL76" name="id_record" physicalName="id_record" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB82" populated="true" UUID="5f29b64e-ada6-40e3-ada1-a788a3af4c92" name="temporada" objectType="TABLE" physicalName="temporada" >
+      <remarks></remarks>
+      <folder id="FOLTAB821" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL83" populated="true" UUID="575ca4ac-e82c-4322-8f36-04555406f4f0" autoIncrement="false" name="id_temporada" nullable="0" physicalName="id_temporada" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL84" populated="true" UUID="ac586b39-9d1a-4882-87fd-9212f7fcba29" autoIncrement="false" name="fecha_inicio" nullable="0" physicalName="fecha_inicio" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL85" populated="true" UUID="e3b0b32b-f1a2-4dd5-b652-f4bcf5ae4b69" autoIncrement="false" name="fecha_fin" nullable="0" physicalName="fecha_fin" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL86" populated="true" UUID="eb2b3e64-8cba-4188-b632-b5c4cb507104" autoIncrement="false" name="nombre" nullable="0" physicalName="nombre" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB823" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB822" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB824" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX87" populated="true" UUID="032f787b-d531-4222-8234-d3851c06cb63" clustered="false" index-type="BTREE" name="pk_temporada" physicalName="pk_temporada" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC88" populated="true" UUID="d28cad2c-e2c1-40e3-9f98-c9aaed868f9b" ascendingOrDescending="UNSPECIFIED" column-ref="COL83" name="id_temporada" physicalName="id_temporada" />
+       </index>
+      </folder>
+     </table>
+    </schema>
+   </catalog>
+   <relationships>
+    <relationship id="REL89" populated="true" UUID="f2ee75d2-e9ae-44b3-8316-fa5d571add49" deferrability="7" deleteRule="0" fk-table-ref="TAB34" fkCardinality="7" identifying="false" name="fk_liga_temp_equipo" physicalName="fk_liga_temp_equipo" pk-table-ref="TAB15" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP90" populated="true" UUID="1304ea5e-eff1-4d8f-a1e5-8c212e89428f" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+    </relationship>
+    <relationship id="REL91" populated="true" UUID="af5f67c2-3ae8-4e6d-ba70-cfeedeed6213" deferrability="7" deleteRule="0" fk-table-ref="TAB59" fkCardinality="7" identifying="false" name="fk_participacion_equipo" physicalName="fk_participacion_equipo" pk-table-ref="TAB15" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP92" populated="true" UUID="f043e566-c17c-43d0-93ba-582d1b35793b" fk-column-ref="COL62" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+    </relationship>
+    <relationship id="REL93" populated="true" UUID="1cdc3b24-c561-490a-9396-96088f6a87ce" deferrability="7" deleteRule="0" fk-table-ref="TAB65" fkCardinality="7" identifying="false" name="fk_partido_local" physicalName="fk_partido_local" pk-table-ref="TAB15" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP94" populated="true" UUID="faef84cb-d4a1-4ed6-a5ba-b78074edaf7c" fk-column-ref="COL67" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+    </relationship>
+    <relationship id="REL95" populated="true" UUID="50c2a8e7-eb9d-4ccf-8849-e4391128077d" deferrability="7" deleteRule="0" fk-table-ref="TAB65" fkCardinality="7" identifying="false" name="fk_partido_visitante" physicalName="fk_partido_visitante" pk-table-ref="TAB15" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP96" populated="true" UUID="76cd6050-3be1-4343-97de-116d388927ca" fk-column-ref="COL68" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+    </relationship>
+    <relationship id="REL97" populated="true" UUID="2c0bf3db-cdb8-4a47-bede-06375e1c3713" deferrability="7" deleteRule="0" fk-table-ref="TAB65" fkCardinality="7" identifying="false" name="fk_partido_jornada" physicalName="fk_partido_jornada" pk-table-ref="TAB20" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP98" populated="true" UUID="0def2074-16df-4cce-90cb-fe4a6bf52082" fk-column-ref="COL72" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL21" />
+    </relationship>
+    <relationship id="REL99" populated="true" UUID="2e44fb05-46ec-4ffd-84ee-a71fa5c3af30" deferrability="7" deleteRule="0" fk-table-ref="TAB75" fkCardinality="7" identifying="false" name="fk_record_jugador" physicalName="fk_record_jugador" pk-table-ref="TAB29" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP100" populated="true" UUID="be5480c5-eddd-43c6-862e-ea41867112da" fk-column-ref="COL78" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL30" />
+    </relationship>
+    <relationship id="REL101" populated="true" UUID="5df3bc58-0de4-4bbe-aebf-7bd7e9f2cdd9" deferrability="7" deleteRule="0" fk-table-ref="TAB20" fkCardinality="7" identifying="false" name="fk_jornada_temporada" physicalName="fk_jornada_temporada" pk-table-ref="TAB82" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP102" populated="true" UUID="95b08f55-0184-4838-add5-3703ad698394" fk-column-ref="COL26" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL83" />
+    </relationship>
+    <relationship id="REL103" populated="true" UUID="431314c6-86b7-4a67-98d9-1c625e1b91c5" deferrability="7" deleteRule="0" fk-table-ref="TAB34" fkCardinality="7" identifying="false" name="fk_liga_temp_temporada" physicalName="fk_liga_temp_temporada" pk-table-ref="TAB82" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP104" populated="true" UUID="0c66c8cf-cae8-47ce-87be-4fba03157e14" fk-column-ref="COL39" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL83" />
+    </relationship>
+    <relationship id="REL105" populated="true" UUID="ca140e2d-9037-4bae-9cc5-f1df2fa31225" deferrability="7" deleteRule="0" fk-table-ref="TAB59" fkCardinality="7" identifying="false" name="fk_participacion_temporada" physicalName="fk_participacion_temporada" pk-table-ref="TAB82" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP106" populated="true" UUID="9af3d8b3-6c02-481e-ad05-88538b502cf5" fk-column-ref="COL61" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL83" />
+    </relationship>
+    <relationship id="REL107" populated="true" UUID="140df47a-0513-4808-8183-87083ca8a61a" deferrability="7" deleteRule="0" fk-table-ref="TAB75" fkCardinality="7" identifying="false" name="fk_record_temporada" physicalName="fk_record_temporada" pk-table-ref="TAB82" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP108" populated="true" UUID="c705f1ac-77d5-46d4-8669-8c5dcf50b511" fk-column-ref="COL77" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL83" />
+    </relationship>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB110" populated="true" UUID="52d55c38-e6de-4319-8a34-653168978684" name="equipo" objectType="TABLE" physicalName="equipo" >
+   <remarks></remarks>
+   <folder id="FOLTAB1101" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL111" populated="true" UUID="b6ec3ccd-523e-4b20-baab-0bde04c36e14" autoIncrement="true" defaultValue="nextval(&apos;public.seq_equipo&apos;::regclass)" name="id_equipo" nullable="0" physicalName="id_equipo" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL16" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL112" populated="true" UUID="58ac5395-5ef7-4caa-aecf-2273f6a50241" autoIncrement="false" defaultValue="" name="nombre" nullable="0" physicalName="nombre" precision="150" referenceCount="1" scale="0" source-column-ref="COL17" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1103" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1102" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1104" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX113" populated="true" UUID="d7fb8f72-1792-4dee-bfa8-1ab27fb6341f" clustered="false" index-type="BTREE" name="pk_equipo" physicalName="pk_equipo" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC114" populated="true" UUID="070a52af-fb7a-4794-9188-236f452f1fe8" ascendingOrDescending="UNSPECIFIED" column-ref="COL111" name="id_equipo" physicalName="id_equipo" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB115" populated="true" UUID="8fddb535-fe8a-41d8-a496-6d80639e965a" name="jornada" objectType="TABLE" physicalName="jornada" >
+   <remarks></remarks>
+   <folder id="FOLTAB1151" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL116" populated="true" UUID="17f72ecc-96ad-4d22-8bc8-bc8c56217696" autoIncrement="false" defaultValue="" name="id_jornada" nullable="0" physicalName="id_jornada" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL21" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL117" populated="true" UUID="87ee99f8-3b4e-49d9-8189-e219cce9e374" autoIncrement="false" defaultValue="" name="numero" nullable="0" physicalName="numero" precision="0" referenceCount="1" scale="0" source-column-ref="COL22" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL118" populated="true" UUID="51526d8d-ed77-4cb9-a69a-0346bfd49fa5" autoIncrement="false" defaultValue="" name="nombre" nullable="0" physicalName="nombre" precision="50" referenceCount="1" scale="0" source-column-ref="COL23" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL119" populated="true" UUID="73b4f475-8686-49ab-b0b5-7e463a07d7e9" autoIncrement="false" defaultValue="" name="fecha_inicio" nullable="0" physicalName="fecha_inicio" precision="0" referenceCount="1" scale="0" source-column-ref="COL24" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL120" populated="true" UUID="08924051-eb51-402a-89b6-4bab959cb260" autoIncrement="false" defaultValue="" name="fecha_fin" nullable="0" physicalName="fecha_fin" precision="0" referenceCount="1" scale="0" source-column-ref="COL25" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL121" populated="true" UUID="8cdbb5d4-84cb-4161-afc5-d5c509e58f52" autoIncrement="false" defaultValue="" name="id_temporada" nullable="0" physicalName="id_temporada" precision="0" referenceCount="2" scale="0" source-column-ref="COL26" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1153" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1152" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1154" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX122" populated="true" UUID="6fa72bb6-0c86-4a83-b4dc-a603d4cfd864" clustered="false" index-type="BTREE" name="pk_jornada" physicalName="pk_jornada" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC123" populated="true" UUID="3d0a036b-b873-4071-b55a-a236320b6177" ascendingOrDescending="UNSPECIFIED" column-ref="COL116" name="id_jornada" physicalName="id_jornada" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB124" populated="true" UUID="8f859fdb-665b-4ad7-9947-05a4f4997a9b" name="jugador" objectType="TABLE" physicalName="jugador" >
+   <remarks></remarks>
+   <folder id="FOLTAB1241" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL125" populated="true" UUID="c002862c-948f-4d6f-9799-1b4ff49be468" autoIncrement="false" defaultValue="" name="id_jugador" nullable="0" physicalName="id_jugador" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL30" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL126" populated="true" UUID="a229e229-0b8d-4977-8dda-cd9f3bcb127f" autoIncrement="false" defaultValue="" name="nombre" nullable="0" physicalName="nombre" precision="150" referenceCount="1" scale="0" source-column-ref="COL31" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1243" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1242" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1244" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX127" populated="true" UUID="3ff7e765-e5be-439c-babe-7f46094daabe" clustered="false" index-type="BTREE" name="pk_jugador" physicalName="pk_jugador" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC128" populated="true" UUID="6c681bf6-e905-42ef-98e1-f92da3341af6" ascendingOrDescending="UNSPECIFIED" column-ref="COL125" name="id_jugador" physicalName="id_jugador" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB129" populated="true" UUID="3eb30601-0e34-4ff4-bc5d-73ffd86a9fd6" name="liga_temp" objectType="TABLE" physicalName="liga_temp" >
+   <remarks></remarks>
+   <folder id="FOLTAB1291" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL130" populated="true" UUID="d4700c95-9e7a-4079-8fce-7b9aad8aa798" autoIncrement="false" defaultValue="" name="id_liga_temp" nullable="0" physicalName="id_liga_temp" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL35" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL131" populated="true" UUID="cf3ad66b-cf16-492c-ba78-55e9701d1bd2" autoIncrement="false" defaultValue="0" name="goles_a_favor" nullable="0" physicalName="goles_a_favor" precision="0" referenceCount="1" scale="0" source-column-ref="COL36" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL132" populated="true" UUID="0fb67e25-c98e-4136-a24c-2bb72fbc4174" autoIncrement="false" defaultValue="0" name="goles_en_contra" nullable="0" physicalName="goles_en_contra" precision="0" referenceCount="1" scale="0" source-column-ref="COL37" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL133" populated="true" UUID="f4c989e0-bd4d-4392-b9ac-cb9579f3f971" autoIncrement="false" defaultValue="0" name="punteo" nullable="0" physicalName="punteo" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL134" populated="true" UUID="95cea8df-38d0-44e4-8a03-504f502285af" autoIncrement="false" defaultValue="" name="id_temporada" nullable="0" physicalName="id_temporada" precision="0" referenceCount="2" scale="0" source-column-ref="COL39" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL135" populated="true" UUID="aae913bf-cc1d-4c6e-8005-d880e0d80e52" autoIncrement="false" defaultValue="" name="id_equipo" nullable="0" physicalName="id_equipo" precision="0" referenceCount="2" scale="0" source-column-ref="COL40" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1293" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1292" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1294" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX136" populated="true" UUID="e4a718cd-92b0-476f-ae34-bf91e70dd2e2" clustered="false" index-type="BTREE" name="pk_liga_temp" physicalName="pk_liga_temp" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC137" populated="true" UUID="39893ac6-d487-46a3-a8e5-7eba1f383579" ascendingOrDescending="UNSPECIFIED" column-ref="COL130" name="id_liga_temp" physicalName="id_liga_temp" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB138" populated="true" UUID="2a7dff12-ef77-4c43-bc69-75ef245e7c31" name="participacion" objectType="TABLE" physicalName="participacion" >
+   <remarks></remarks>
+   <folder id="FOLTAB1381" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL139" populated="true" UUID="9850891c-098b-4539-b54b-07b22944f0a7" autoIncrement="false" defaultValue="" name="id_participacion" nullable="0" physicalName="id_participacion" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL60" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL140" populated="true" UUID="850437ad-02e3-4177-ae65-99bc250a11c8" autoIncrement="false" defaultValue="" name="id_temporada" nullable="0" physicalName="id_temporada" precision="0" referenceCount="2" scale="0" source-column-ref="COL61" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL141" populated="true" UUID="8965af3b-1d87-418a-9079-6887c8a82669" autoIncrement="false" defaultValue="" name="id_equipo" nullable="0" physicalName="id_equipo" precision="0" referenceCount="2" scale="0" source-column-ref="COL62" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1383" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1382" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1384" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX142" populated="true" UUID="266191d3-7d36-49b7-b60a-99ff52670fb1" clustered="false" index-type="BTREE" name="pk_participacion" physicalName="pk_participacion" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC143" populated="true" UUID="1b7dd484-7511-4d0b-b134-971557614dac" ascendingOrDescending="UNSPECIFIED" column-ref="COL139" name="id_participacion" physicalName="id_participacion" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB144" populated="true" UUID="a3708bb0-453b-43a9-a2cf-50625c52b44d" name="partido" objectType="TABLE" physicalName="partido" >
+   <remarks></remarks>
+   <folder id="FOLTAB1441" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL145" populated="true" UUID="2829ca7b-c3e5-48e4-aefe-033e3032402e" autoIncrement="false" defaultValue="" name="id_partido" nullable="0" physicalName="id_partido" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL66" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL146" populated="true" UUID="b601798d-3bd5-4ffd-bcd5-468c01fc9d76" autoIncrement="false" defaultValue="" name="id_local" nullable="0" physicalName="id_local" precision="0" referenceCount="2" scale="0" source-column-ref="COL67" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL147" populated="true" UUID="f3f4e3de-4bf3-4c49-b10d-a7bc53e5c8da" autoIncrement="false" defaultValue="" name="id_visitante" nullable="0" physicalName="id_visitante" precision="0" referenceCount="2" scale="0" source-column-ref="COL68" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL148" populated="true" UUID="23554cf8-bdca-4d4e-9156-8a443f873461" autoIncrement="false" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" source-column-ref="COL69" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL149" populated="true" UUID="b6c86e79-bf32-4fc3-8fc0-98a177cb37b1" autoIncrement="false" defaultValue="0" name="goles_local" nullable="0" physicalName="goles_local" precision="0" referenceCount="1" scale="0" source-column-ref="COL70" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL150" populated="true" UUID="645a6e61-b007-4b01-a95c-1643196d6ca0" autoIncrement="false" defaultValue="0" name="goles_visitante" nullable="0" physicalName="goles_visitante" precision="0" referenceCount="1" scale="0" source-column-ref="COL71" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL151" populated="true" UUID="145c892d-d64c-4f82-a987-e056ebe79d64" autoIncrement="false" defaultValue="" name="id_jornada" nullable="0" physicalName="id_jornada" precision="0" referenceCount="2" scale="0" source-column-ref="COL72" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1443" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1442" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1444" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX152" populated="true" UUID="a5db6ea5-9be4-4460-a2e7-4e14ddeedef2" clustered="false" index-type="BTREE" name="pk_partido" physicalName="pk_partido" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC153" populated="true" UUID="797c62dd-d90b-4f28-a3dd-8b509999207d" ascendingOrDescending="UNSPECIFIED" column-ref="COL145" name="id_partido" physicalName="id_partido" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB154" populated="true" UUID="4245cec5-096a-46cb-9dd7-38de9a239036" name="record" objectType="TABLE" physicalName="record" >
+   <remarks></remarks>
+   <folder id="FOLTAB1541" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL155" populated="true" UUID="f4fa0c1e-a092-40a5-ac8f-09508b0cd383" autoIncrement="false" defaultValue="" name="id_record" nullable="0" physicalName="id_record" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL76" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL156" populated="true" UUID="b612b2aa-21cd-4e6e-b337-3d8676235415" autoIncrement="false" defaultValue="" name="id_temporada" nullable="0" physicalName="id_temporada" precision="0" referenceCount="2" scale="0" source-column-ref="COL77" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL157" populated="true" UUID="6b18b1f6-1222-48a0-9bb2-004fd5bc9825" autoIncrement="false" defaultValue="" name="id_jugador" nullable="0" physicalName="id_jugador" precision="0" referenceCount="2" scale="0" source-column-ref="COL78" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL158" populated="true" UUID="2a46c910-ecd6-4a62-871b-a522744a21b7" autoIncrement="false" defaultValue="0" name="goles" nullable="0" physicalName="goles" precision="0" referenceCount="1" scale="0" source-column-ref="COL79" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1543" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1542" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1544" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX159" populated="true" UUID="f10cc883-6178-4311-8375-ce8587422937" clustered="false" index-type="BTREE" name="pk_record" physicalName="pk_record" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC160" populated="true" UUID="5fe42818-3885-4556-87ac-718095c9aeaf" ascendingOrDescending="UNSPECIFIED" column-ref="COL155" name="id_record" physicalName="id_record" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB161" populated="true" UUID="2677447f-5f37-4a18-88c7-d999ed247b80" name="temporada" objectType="TABLE" physicalName="temporada" >
+   <remarks></remarks>
+   <folder id="FOLTAB1611" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL162" populated="true" UUID="82e1bd25-e7d3-431e-a699-078a7a7eff0e" autoIncrement="false" defaultValue="" name="id_temporada" nullable="0" physicalName="id_temporada" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL83" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL163" populated="true" UUID="cbece8f3-9d43-4b82-9b98-310f7b251e6a" autoIncrement="false" defaultValue="" name="fecha_inicio" nullable="0" physicalName="fecha_inicio" precision="0" referenceCount="1" scale="0" source-column-ref="COL84" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL164" populated="true" UUID="c0f90223-2cff-4222-9704-076e0e601826" autoIncrement="false" defaultValue="" name="fecha_fin" nullable="0" physicalName="fecha_fin" precision="0" referenceCount="1" scale="0" source-column-ref="COL85" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL165" populated="true" UUID="11b40fa1-41fa-47e6-b6cc-7bc561430f69" autoIncrement="false" defaultValue="" name="nombre" nullable="0" physicalName="nombre" precision="50" referenceCount="1" scale="0" source-column-ref="COL86" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1613" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1612" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1614" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX166" populated="true" UUID="f2beb26e-6ff1-4ccc-908d-a997812c0e1b" clustered="false" index-type="BTREE" name="pk_temporada" physicalName="pk_temporada" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC167" populated="true" UUID="37cd16f9-3814-43d2-86a1-38b1378c1eac" ascendingOrDescending="UNSPECIFIED" column-ref="COL162" name="id_temporada" physicalName="id_temporada" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL168" populated="true" UUID="92706703-3132-4a97-8769-9a747fad8f24" deferrability="7" deleteRule="0" fk-table-ref="TAB129" fkCardinality="7" identifying="false" name="fk_liga_temp_equipo" physicalName="fk_liga_temp_equipo" pk-table-ref="TAB110" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP169" populated="true" UUID="8b4fd2d9-2f46-4dd3-a0ce-01a3b132d4ac" fk-column-ref="COL135" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL111" />
+   </relationship>
+   <relationship id="REL170" populated="true" UUID="08a26324-7b92-4526-8d3c-441568bdf5b8" deferrability="7" deleteRule="0" fk-table-ref="TAB138" fkCardinality="7" identifying="false" name="fk_participacion_equipo" physicalName="fk_participacion_equipo" pk-table-ref="TAB110" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP171" populated="true" UUID="ef2b44f9-6638-4dce-803b-ef5ff58d46d0" fk-column-ref="COL141" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL111" />
+   </relationship>
+   <relationship id="REL172" populated="true" UUID="063630fe-10b0-44ec-b765-986d7605bc91" deferrability="7" deleteRule="0" fk-table-ref="TAB144" fkCardinality="7" identifying="false" name="fk_partido_local" physicalName="fk_partido_local" pk-table-ref="TAB110" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP173" populated="true" UUID="8cbad019-853f-4a22-9b34-90c14b67a096" fk-column-ref="COL146" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL111" />
+   </relationship>
+   <relationship id="REL174" populated="true" UUID="a0170e26-879b-4b44-9ef3-f6cc2995f5d1" deferrability="7" deleteRule="0" fk-table-ref="TAB144" fkCardinality="7" identifying="false" name="fk_partido_visitante" physicalName="fk_partido_visitante" pk-table-ref="TAB110" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP175" populated="true" UUID="4f9fdb65-78b5-46ff-aed3-333fb76642a9" fk-column-ref="COL147" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL111" />
+   </relationship>
+   <relationship id="REL176" populated="true" UUID="8db921c2-56d1-47f5-8772-66e01e93ecb2" deferrability="7" deleteRule="0" fk-table-ref="TAB144" fkCardinality="7" identifying="false" name="fk_partido_jornada" physicalName="fk_partido_jornada" pk-table-ref="TAB115" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP177" populated="true" UUID="4084a62f-ceda-4fe1-b06a-176370429633" fk-column-ref="COL151" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL116" />
+   </relationship>
+   <relationship id="REL178" populated="true" UUID="70deab71-4b5e-4fb8-80fc-d938d490904d" deferrability="7" deleteRule="0" fk-table-ref="TAB154" fkCardinality="7" identifying="false" name="fk_record_jugador" physicalName="fk_record_jugador" pk-table-ref="TAB124" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP179" populated="true" UUID="fe10a190-8416-4aa3-b525-548135d122e9" fk-column-ref="COL157" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL125" />
+   </relationship>
+   <relationship id="REL180" populated="true" UUID="067c9827-60e9-486b-8315-a84a28b263d5" deferrability="7" deleteRule="0" fk-table-ref="TAB115" fkCardinality="7" identifying="false" name="fk_jornada_temporada" physicalName="fk_jornada_temporada" pk-table-ref="TAB161" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP181" populated="true" UUID="e6674075-a9c8-4333-962a-5f1ac2bb4842" fk-column-ref="COL121" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL162" />
+   </relationship>
+   <relationship id="REL182" populated="true" UUID="e2309c6f-bf71-4c2e-8bba-58ae0698e101" deferrability="7" deleteRule="0" fk-table-ref="TAB129" fkCardinality="7" identifying="false" name="fk_liga_temp_temporada" physicalName="fk_liga_temp_temporada" pk-table-ref="TAB161" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP183" populated="true" UUID="b60f77ad-4e0c-4d29-8d32-c5a1897374c7" fk-column-ref="COL134" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL162" />
+   </relationship>
+   <relationship id="REL184" populated="true" UUID="89302ff7-54b8-4fc5-b811-ca10043e0ea6" deferrability="7" deleteRule="0" fk-table-ref="TAB138" fkCardinality="7" identifying="false" name="fk_participacion_temporada" physicalName="fk_participacion_temporada" pk-table-ref="TAB161" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP185" populated="true" UUID="e2ffdb63-fee4-44df-bca6-ef317f9a0b03" fk-column-ref="COL140" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL162" />
+   </relationship>
+   <relationship id="REL186" populated="true" UUID="273dd855-d852-4f3b-b6c7-bb1b63e3083d" deferrability="7" deleteRule="0" fk-table-ref="TAB154" fkCardinality="7" identifying="false" name="fk_record_temporada" physicalName="fk_record_temporada" pk-table-ref="TAB161" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP187" populated="true" UUID="a26c6758-a6be-4eaa-a4e2-a9c9ace077cc" fk-column-ref="COL156" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL162" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.7948051948051947" viewportX="7" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB110" x="1144" y="366" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB115" x="444" y="167" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB124" x="140" y="220" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB129" x="789" y="315" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB138" x="789" y="505" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB144" x="1114" y="140" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB154" x="134" y="383" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB161" x="452" y="384" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL168" pkConnection="0.5" fkConnection="0.6268656716417911" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL170" pkConnection="0.9393939393939394" fkConnection="0.6024096385542169" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL172" pkConnection="0.3717948717948718" fkConnection="0.47950819672131145" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL174" pkConnection="0.45726495726495725" fkConnection="0.5614754098360656" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL176" pkConnection="0.4626865671641791" fkConnection="0.5894039735099338" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL178" pkConnection="0.5" fkConnection="0.4844961240310077" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL180" pkConnection="0.4826254826254826" fkConnection="0.5155038759689923" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL182" pkConnection="0.32" fkConnection="0.753731343283582" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL184" pkConnection="0.69" fkConnection="0.6024096385542169" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL186" pkConnection="0.49" fkConnection="0.5" rLineColor="0x4d4d4d" pkLabelText="" fkLabelText="" orientation="18"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
