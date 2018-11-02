@@ -1,4 +1,6 @@
-﻿DELETE FROM participacion;
+﻿DELETE FROM record;
+DELETE FROM jugador;
+DELETE FROM participacion;
 DELETE FROM partido;
 DELETE FROM equipo;
 DELETE FROM jornada;
@@ -38,5 +40,16 @@ FROM master_partido, temporada, equipo
 WHERE master_partido.temporada = temporada.nombre
 AND master_partido.equipo_local = equipo.nombre
 ORDER BY id_temporada;
+ 
+ALTER TABLE jugador ALTER COLUMN id_jugador SET DEFAULT nextval('seq_jugador');
+
+INSERT INTO jugador (nombre)
+SELECT DISTINCT jugador FROM master_goleador; 
+
+INSERT INTO record (id_record, id_temporada, id_jugador, goles)
+SELECT nextval('seq_record'), id_temporada, id_jugador, goles
+FROM master_goleador, temporada, jugador
+WHERE  master_goleador.temporada = temporada.nombre
+AND master_goleador.jugador = jugador.nombre;
 
 
