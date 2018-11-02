@@ -1,0 +1,27 @@
+$ mongo laligadb
+MongoDB shell version: 3.2.21
+connecting to: laligadb
+> db.createCollection("goleadores");
+{ "ok" : 1 }
+> exit
+bye
+
+$ mongoimport -d laligadb -c goleadores --jsonArray --file=GoleadoresLaLiga.json 
+2018-11-02T01:15:52.502-0600	connected to: localhost
+2018-11-02T01:15:52.633-0600	imported 4618 documents
+
+$ mongo laligadb
+MongoDB shell version: 3.2.21
+connecting to: laligadb
+> db.goleadores.find({goles:{$gte:40}})
+{ "_id" : ObjectId("5bdbf9a8f95340bbb6ef8be2"), "temporada" : "10-11", "jugador" : "Cristiano Ronaldo", "goles" : 40 }
+{ "_id" : ObjectId("5bdbf9a8f95340bbb6ef8ce4"), "temporada" : "11-12", "jugador" : "Messi", "goles" : 50 }
+{ "_id" : ObjectId("5bdbf9a8f95340bbb6ef8ce5"), "temporada" : "11-12", "jugador" : "Cristiano Ronaldo", "goles" : 46 }
+{ "_id" : ObjectId("5bdbf9a8f95340bbb6ef8de6"), "temporada" : "12-13", "jugador" : "Messi", "goles" : 46 }
+{ "_id" : ObjectId("5bdbf9a8f95340bbb6ef8fee"), "temporada" : "14-15", "jugador" : "Cristiano Ronaldo", "goles" : 48 }
+{ "_id" : ObjectId("5bdbf9a8f95340bbb6ef8fef"), "temporada" : "14-15", "jugador" : "Messi", "goles" : 43 }
+{ "_id" : ObjectId("5bdbf9a8f95340bbb6ef90ec"), "temporada" : "15-16", "jugador" : "Luis Suárez", "goles" : 40 }
+> exit
+bye
+
+$ 
