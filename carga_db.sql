@@ -1,4 +1,7 @@
-﻿DELETE FROM record;
+﻿DELETE FROM liga_temp;
+DELETE FROM pichichi_temp;
+DELETE FROM ganadores_temp;
+DELETE FROM record;
 DELETE FROM jugador;
 DELETE FROM participacion;
 DELETE FROM partido;
@@ -52,4 +55,12 @@ FROM master_goleador, temporada, jugador
 WHERE  master_goleador.temporada = temporada.nombre
 AND master_goleador.jugador = jugador.nombre;
 
+ALTER TABLE liga_temp ALTER COLUMN id_liga_temp SET DEFAULT nextval('seq_liga_temp');
 
+ALTER TABLE pichichi_temp ALTER COLUMN id_pichichi_temp SET DEFAULT nextval('seq_pichichi_temp');
+
+ALTER TABLE ganadores_temp ALTER COLUMN id_ganadores_temp SET DEFAULT nextval('seq_ganadores_temp');
+
+ALTER TABLE posicion_equipo_temp ALTER COLUMN id_posicion_equipo_temp SET DEFAULT nextval('seq_posicion_equipo_temp');
+
+ALTER TABLE historial_equipo_temp ALTER COLUMN id_historial_equipo_temp SET DEFAULT nextval('seq_historial_equipo_temp');
